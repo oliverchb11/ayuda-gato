@@ -1,0 +1,15 @@
+<div class="pagination">
+    <ul>
+        <li> <a routerLink="/Paginator" (click)="primeiraPag()">|<</a></li>
+        <li>
+            <a routerLink="/Paginator" (click)="paginaAnt()">
+                <</a>
+        </li>
+        <li *ngFor="let pag of diminuiPaginacao(arrayPages)" [class.active]="pag == page"><a (click)="mudaPag(pag)">{{pag}}</a></li>
+
+        <li><a routerLink="/Paginator" (click)="proxPagina()">></a></li>
+        <li><a routerLink="/Paginator" (click)="ultimaPag()">>|</a></li>
+        <li><a>Total: {{totalPages}}</a></li>
+    </ul>
+
+</div>

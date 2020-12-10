@@ -1,0 +1,16 @@
+<h1 class="text-center">Lista de usuarios</h1>
+
+
+
+
+
+
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let usuario of usuarios">{{ usuario.first_name }}
+        <img [src]="usuario.avatar" alt="">
+    </li>
+
+</ul>
+<app-paginator-table [page]="page" total="total" [totalPages]="totalPages" (mudouPagina)="mudouPagina($event)">
+</app-paginator-table>
